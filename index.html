@@ -3,188 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nour Elgammal | Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Nour Elgammal | Data Storyteller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        /* The "Dark Academia" Palette */
+        :root {
+            --bg-color: #f5f0e6;       /* Old Paper / Cream */
+            --text-color: #2b2b2b;     /* Soft Black / Charcoal */
+            --accent-color: #800020;   /* Burgundy (Deep Red) */
+            --border-color: #dcd6cc;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* Navigation / Header */
-        header {
-            background-color: #ffffff;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        header h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2563eb; /* Professional Blue */
-            margin: 0;
+            line-height: 1.8;
         }
 
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a1a1a;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 40px 10%;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
         nav a {
+            margin: 0 15px;
             text-decoration: none;
             color: #555;
-            margin-left: 20px;
-            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
         
-        nav a:hover { color: #2563eb; }
+        nav a:hover { color: var(--accent-color); border-bottom: 1px solid var(--accent-color); }
 
-        /* Hero Section */
-        .hero {
+        /* Header */
+        header {
             text-align: center;
-            padding: 100px 20px;
-            background-color: #f8fafc;
+            padding: 80px 20px;
+            max-width: 700px;
+            margin: auto;
         }
-        
-        .hero h2 {
+
+        header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            color: #1e293b;
+            font-style: italic;
         }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 300;
         }
-        
-        .btn {
-            display: inline-block;
-            background-color: #2563eb;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
+
+        .separator {
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin: 30px auto;
         }
-        
-        .btn:hover { background-color: #1d4ed8; }
 
         /* Sections */
         .section {
-            padding: 60px 10%;
+            max-width: 800px;
+            margin: auto;
+            padding: 60px 20px;
         }
-        
+
         .section-title {
-            text-align: center;
             font-size: 2rem;
-            margin-bottom: 40px;
-            color: #1e293b;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
         }
 
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .project-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 25px;
-            background: white;
-            transition: transform 0.2s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        
-        .project-card h3 { margin-top: 0; color: #1e293b; }
-        .project-card p { color: #64748b; font-size: 0.95rem; }
-        .tech-stack {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #2563eb;
-            font-weight: 600;
+        /* Skills & Learning */
+        .skill-tag {
+            display: inline-block;
+            background: #e6e0d4;
+            padding: 8px 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #444;
         }
 
-        /* Footer */
+        .learning-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .learning-item h3 { margin-top: 0; margin-bottom: 5px; }
+        .learning-item span { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Contact Section */
+        .contact-links a {
+            display: inline-block;
+            margin: 10px 20px;
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-bottom: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .contact-links a:hover {
+            border-bottom: 1px solid var(--accent-color);
+        }
+
         footer {
             text-align: center;
-            padding: 40px;
-            background-color: #1e293b;
-            color: #94a3b8;
+            padding: 50px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid var(--border-color);
             margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="#about">About</a>
+        <a href="#learning">My Journey</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <header>
         <h1>Nour Elgammal</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="separator"></div>
+        <p>Turning complex data into clear, meaningful stories.</p>
     </header>
-
-    <section class="hero">
-        <h2>Hi, I'm Nour.</h2>
-        <p>A Data Analyst passionate about uncovering insights and telling stories through data.</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
 
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
-        <p style="max-width: 800px; margin: auto; text-align: center; color: #475569;">
-            I specialize in transforming raw data into actionable insights. With a strong foundation in analytical thinking and problem-solving, I use tools like <strong>Python, SQL, and Excel</strong> to help make data-driven decisions. I am constantly learning new technologies to enhance my analytical toolkit.
+        <p>
+            I am a Science student with a deep interest in the narrative power of data. Just as a good novel weaves characters into a plot, I believe data analysis weaves numbers into insights.
         </p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <h3>Sales Data Analysis</h3>
-                <p>Analyzed a large dataset of retail sales to identify trends, seasonal patterns, and top-performing products.</p>
-                <div class="tech-stack">Python (Pandas) • Matplotlib</div>
-            </div>
-
-            <div class="project-card">
-                <h3>Customer Churn Prediction</h3>
-                <p>Exploratory data analysis on customer behavior to understand factors contributing to churn rates.</p>
-                <div class="tech-stack">SQL • Excel • Tableau</div>
-            </div>
-
-            <div class="project-card">
-                <h3>Web Scraping Project</h3>
-                <p>Collected and cleaned data from web sources to create a structured dataset for analysis.</p>
-                <div class="tech-stack">Python • BeautifulSoup</div>
-            </div>
-
+        <p>
+            When I'm not analyzing datasets, you can find me knitting cardigans or reading literary fiction. I bring that same patience and attention to detail into my technical work.
+        </p>
+        <div style="margin-top: 30px;">
+            <strong>Current Toolkit:</strong><br><br>
+            <span class="skill-tag">Python (Learning)</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Analytical Thinking</span>
+            <span class="skill-tag">Research</span>
         </div>
     </section>
 
-    <section id="contact" class="section" style="background-color: #f8fafc; text-align: center;">
-        <h2 class="section-title">Get In Touch</h2>
-        <p style="margin-bottom: 30px;">I'm currently open to new opportunities. Feel free to reach out!</p>
-        <a href="mailto:nour.elgamal52@gmail.com" class="btn">Email Me</a>
-        <br><br>
-        <a href="https://www.linkedin.com/in/nour-ali-elgamal" style="color: #2563eb; text-decoration: none;">Connect on LinkedIn</a>
+    <section id="learning" class="section">
+        <h2 class="section-title">What I'm Learning</h2>
+        <p style="margin-bottom: 40px; color: #666;">I am currently building my portfolio through continuous learning and practical exercises.</p>
+
+        <div class="learning-item">
+            <span>In Progress</span>
+            <h3>Python for Data Science</h3>
+            <p>Mastering libraries like Pandas and NumPy to clean and manipulate raw data efficiently.</p>
+        </div>
+
+        <div class="learning-item">
+            <span>Interest</span>
+            <h3>Data Visualization</h3>
+            <p>Exploring how to present data visually to make it accessible and impactful for decision-making.</p>
+        </div>
+
+        <div class="learning-item">
+            <span>Academic Background</span>
+            <h3>Scientific Research Methods</h3>
+            <p>Applying rigorous scientific methods from my university studies to data problems.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="text-align: center;">
+        <h2 class="section-title" style="border: none; padding: 0;">Let's Connect</h2>
+        <p>I am open to internships and entry-level opportunities in data analysis.</p>
+        <br>
+        <div class="contact-links">
+            <a href="mailto:nour.elgamal152@gmail.com">Email Me</a>
+            <a href="https://www.linkedin.com/in/nour-ali-elgamal" target="_blank">LinkedIn Profile</a>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 Nour Elgammal. Built with GitHub Pages.</p>
+        <p>&copy; 2026 Nour Elgammal</p>
     </footer>
 
 </body>
